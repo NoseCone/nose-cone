@@ -1,0 +1,140 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.dhall by hpack version 0.31.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 9a0b16a87c067bbb8e5afd015f68b104f5d10799f84de546ea539be4da824d59
+
+name:           app-view
+version:        0.1.0
+synopsis:       A collection of apps and libraries for scoring hang gliding and paragliding competitions.
+description:    Scoring and viewing hang gliding and paragliding competitions.
+category:       Data, Parsing
+homepage:       https://github.com/blockscope/flare-timing#readme
+bug-reports:    https://github.com/blockscope/flare-timing/issues
+author:         Phil de Joux
+maintainer:     phil.dejoux@blockscope.com
+copyright:      © 2017-2019 Phil de Joux, © 2017-2019 Block Scope Limited
+license:        MPL-2.0
+license-file:   LICENSE.md
+tested-with:    GHC == 8.2.2
+build-type:     Simple
+extra-source-files:
+    package.dhall
+    changelog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/blockscope/flare-timing
+  subdir: app-view
+
+executable comp-view
+  main-is: App.hs
+  other-modules:
+      Data.Ratio.Rounding
+      FlareTiming.Breadcrumb
+      FlareTiming.Comms
+      FlareTiming.Comp.Detail
+      FlareTiming.Comp.Header
+      FlareTiming.Comp.Pilot
+      FlareTiming.Comp.Settings
+      FlareTiming.Comp.Tab
+      FlareTiming.Comp.Tasks
+      FlareTiming.Earth
+      FlareTiming.Events
+      FlareTiming.Footer
+      FlareTiming.Katex
+      FlareTiming.Map.Leaflet
+      FlareTiming.Map.View
+      FlareTiming.Nav.TabBasis
+      FlareTiming.Nav.TabPlot
+      FlareTiming.Nav.TabScore
+      FlareTiming.Nav.TabTask
+      FlareTiming.Pilot
+      FlareTiming.Plot.Arrival
+      FlareTiming.Plot.Arrival.Plot
+      FlareTiming.Plot.Arrival.View
+      FlareTiming.Plot.Effort
+      FlareTiming.Plot.Effort.Plot
+      FlareTiming.Plot.Effort.View
+      FlareTiming.Plot.Foreign
+      FlareTiming.Plot.Lead
+      FlareTiming.Plot.Lead.Plot
+      FlareTiming.Plot.Lead.View
+      FlareTiming.Plot.Reach
+      FlareTiming.Plot.Reach.Plot
+      FlareTiming.Plot.Reach.View
+      FlareTiming.Plot.Time
+      FlareTiming.Plot.Time.Plot
+      FlareTiming.Plot.Time.View
+      FlareTiming.Plot.Valid
+      FlareTiming.Plot.Valid.Plot
+      FlareTiming.Plot.Valid.View
+      FlareTiming.Plot.Weight
+      FlareTiming.Plot.Weight.Plot
+      FlareTiming.Plot.Weight.View
+      FlareTiming.Plot.Weight.Working
+      FlareTiming.Statistics
+      FlareTiming.Task
+      FlareTiming.Task.Absent
+      FlareTiming.Task.Detail
+      FlareTiming.Task.Geo
+      FlareTiming.Task.Score.Arrive
+      FlareTiming.Task.Score.Effort
+      FlareTiming.Task.Score.Over
+      FlareTiming.Task.Score.Reach
+      FlareTiming.Task.Score.Show
+      FlareTiming.Task.Score.Speed
+      FlareTiming.Task.Score.Split
+      FlareTiming.Task.Score.Time
+      FlareTiming.Task.Turnpoints
+      FlareTiming.Task.Validity
+      FlareTiming.Task.Validity.Distance
+      FlareTiming.Task.Validity.Launch
+      FlareTiming.Task.Validity.Stop
+      FlareTiming.Task.Validity.Stop.Counts
+      FlareTiming.Task.Validity.Stop.Max
+      FlareTiming.Task.Validity.Stop.Mean
+      FlareTiming.Task.Validity.Stop.StdDev
+      FlareTiming.Task.Validity.Task
+      FlareTiming.Task.Validity.Time
+      FlareTiming.Task.Validity.Widget
+      FlareTiming.Time
+      FlareTiming.Turnpoint
+      FlareTiming.View
+      Reflex.Dom.Contrib.Utils
+      WireTypes.Arrival
+      WireTypes.Comp
+      WireTypes.Cross
+      WireTypes.Effort
+      WireTypes.Fraction
+      WireTypes.Lead
+      WireTypes.Pilot
+      WireTypes.Point
+      WireTypes.Reach
+      WireTypes.Route
+      WireTypes.Speed
+      WireTypes.Validity
+      WireTypes.ValidityWorking
+      WireTypes.Zone
+      WireTypes.ZoneKind
+      Paths_app_view
+  hs-source-dirs:
+      comp-view
+  default-extensions: ConstraintKinds DataKinds DeriveFunctor DeriveGeneric DeriveAnyClass DerivingStrategies DisambiguateRecordFields DuplicateRecordFields FlexibleContexts FlexibleInstances GeneralizedNewtypeDeriving GADTs KindSignatures LambdaCase MonoLocalBinds MultiParamTypeClasses MultiWayIf NamedFieldPuns OverloadedStrings PackageImports ParallelListComp PartialTypeSignatures PatternSynonyms QuasiQuotes RankNTypes RecursiveDo RecordWildCards ScopedTypeVariables StandaloneDeriving TemplateHaskell TypeApplications TypeFamilies TypeOperators TypeSynonymInstances TupleSections UndecidableInstances
+  ghc-options: -Wall -rtsopts -threaded -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >4.9 && <5
+    , containers
+    , ghcjs-base
+    , ghcjs-dom
+    , mtl
+    , reflex
+    , reflex-dom
+    , scientific
+    , text
+    , time
+  default-language: Haskell2010
