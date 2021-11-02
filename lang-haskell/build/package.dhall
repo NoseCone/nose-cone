@@ -2,7 +2,7 @@ let mkHome = ./../home.dhall
 
 in    ./../defaults.dhall
     ⫽ { name =
-          "ft-build"
+          "shake-nose-cone"
       , homepage =
           mkHome "lang-haskell/build#readme"
       , synopsis =
@@ -12,7 +12,7 @@ in    ./../defaults.dhall
       , category =
           "Data, Parsing"
       , executables =
-          { ft-build =
+          { shake-nose-cone =
               { dependencies =
                   [ "base"
                   , "ansi-terminal"

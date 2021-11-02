@@ -2,5 +2,5 @@
 
 #set +v
 
-stack install shake-nose-cone
+cabal install shake-nose-cone
 shake-nose-cone $@
