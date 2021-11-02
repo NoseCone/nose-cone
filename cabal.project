@@ -1,6 +1,6 @@
 with-compiler: ghc-8.2.2
 packages:
-      lang-haskell/build
+      shake-nose-cone
 
 constraints:
     -- NOTE: The following are taken from stack.yaml extra-deps section.

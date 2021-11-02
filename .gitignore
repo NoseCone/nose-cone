@@ -41,4 +41,3 @@ bazel-*
 lang-fsharp/packages
 *.swk
 *.swj
-lang-haskell/reflex-platform/
