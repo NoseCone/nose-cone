@@ -52,25 +52,25 @@ cleanRules =
         removeFilesAfter "__www-dist-cabal" [ "//*" ]
 
         removeFilesAfter
-            "dist-ghcjs/build/x86_64-linux/ghcjs-8.4.0.1/app-view-0.1.0"
+            "dist-ghcjs/build/x86_64-linux/ghcjs-8.4.0.1/nose-cone-0.1.0"
             [ "//*" ]
 
 outCabal :: FilePath
-outCabal = "__www-dist-cabal" </> "task-view"
+outCabal = "__www-dist-cabal" </> "nose-cone"
 
 outGhcjs :: FilePath
-outGhcjs = "__www-dist-ghcjs" </> "task-view"
+outGhcjs = "__www-dist-ghcjs" </> "nose-cone"
 
 tmpCabal :: FilePath
 tmpCabal =
-    "dist-ghcjs/build/x86_64-linux/ghcjs-8.4.0.1/app-view-0.1.0/x/comp-view/build/comp-view"
+    "dist-ghcjs/build/x86_64-linux/ghcjs-8.4.0.1/nose-cone-0.1.0/x/comp-view/build/comp-view"
     </> "comp-view.jsexe"
 
 tmpGhcjs :: FilePath
 tmpGhcjs = "__www-build-ghcjs" </> "app.jsexe"
 
 view :: FilePath
-view = "app-view" </> "comp-view"
+view = "nose-cone" </> "comp-view"
 
 webpackPackageJson :: FilePath
 webpackPackageJson = view </> "node_modules" </> "webpack" </> "package.json"
@@ -135,7 +135,7 @@ buildWithCabalRules = do
     buildWith "cabal" tmpCabal outCabal
 
     mconcat $ (\s -> tmpCabal </> s %> \ _ -> do
-        cmd Shell "./cabal-ghcjs new-build app-view")
+        cmd Shell "./cabal-ghcjs new-build nose-cone")
         <$> ghcjsOutputs
 
 buildRules :: Rules ()
