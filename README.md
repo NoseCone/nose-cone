@@ -1,10 +1,9 @@
 # Nose Cone
 
 **Nose Cone** is a web app front end for flare-timing. As well as presenting
-*comp results it helps making visual
-checks and comparisons with expected or official results. It is possible to
-publish the data alongside this web app standalone as done at [flaretiming, the
-web site](https://flaretiming.com).
+comp results it helps making visual checks and comparisons with expected or
+official results. It is possible to publish the data alongside this web app
+standalone as done at [flaretiming, the web site](https://flaretiming.com).
 
 ## Usage
 
