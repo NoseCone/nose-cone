@@ -15,11 +15,11 @@ module.exports = {
     },
     devtool: 'source-map',
     output: {
-        path: path.resolve(__dirname, '../../__www-dist-ghcjs/task-view'),
+        path: path.resolve(__dirname, '../__www-dist-ghcjs/nose-cone'),
         filename: '[name].js'
     },
     devServer: {
-        contentBase: path.resolve(__dirname, "../../__www-dist-ghcjs/task-view"),
+        contentBase: path.resolve(__dirname, "../__www-dist-ghcjs/nose-cone"),
         compress: true,
         port: 9000
     },
