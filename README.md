@@ -9,18 +9,17 @@ standalone as done at [flaretiming, the web site](https://flaretiming.com).
 
 To get the backend server for hosting the comp data running locally:
 
-Start the server with
-[`ft-comp-serve`](lang-haskell/app-serve).  
+Start the
+[`ft-comp-serve`](https://github.com/GlideAngle/flare-timing/tree/main/lang-haskell/app-serve)
+server.  
 
 To host the frontend web app for the comp locally:
 
-1. Change directory:
-    `> cd lang-haskell`
-2. Open a try-reflex shell with:
+1. Open a try-reflex shell with:
     `> reflex-platform/try-reflex`
-3. Build the frontend and start its webpack dev server with:
-    `> ../stack-shake-build.sh view-start-ghcjs`
-4. Open a browser at the hosted URL, usually http://localhost:9000/app.html.
+2. Build the frontend and start its webpack dev server with:
+    `> ./stack-shake-build.sh view-start-ghcjs`
+3. Open a browser at the hosted URL, usually http://localhost:9000/app.html.
 
 ## License
 
